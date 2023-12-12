@@ -57,8 +57,8 @@ public class ProductService {
             productEntity.setCategories(Collections.emptySet());
             productRepository.save(productEntity);
             productRepository.delete(productEntity);
-        },
-                () -> {throw new NotFoundException("Product Does not exist.");
+        }, () -> {
+            throw new NotFoundException("Product Does not exist.");
         });
     }
 }
