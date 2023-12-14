@@ -1,5 +1,6 @@
 package com.example.inventorymanagementamazon.dto;
 
+import jakarta.validation.constraints.NotEmpty;
 import lombok.*;
 
 import java.math.BigInteger;
@@ -14,7 +15,6 @@ public class CategoryDTO {
 
     private BigInteger id;
 
+    @NotEmpty(message = "name should not be empty")
     private String name;
-
-    Set<ProductDTO> products;
 }

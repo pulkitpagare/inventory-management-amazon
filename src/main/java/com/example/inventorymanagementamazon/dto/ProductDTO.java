@@ -23,7 +23,8 @@ public class ProductDTO {
     @NotBlank(message = "name is required")
     private String name;
 
-    private Integer brandId;
+    @NotBlank(message = "brand is required")
+    private String brandName;
 
     private String description;
 

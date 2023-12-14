@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.math.BigInteger;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -18,7 +19,7 @@ public class CategoryService {
     CategoryRepository categoryRepository;
 
     @LogExecutionTime
-    public Iterable<Category> findAllCategory(){
+    public List<Category> findAllCategory(){
         return categoryRepository.findAll();
     }
 

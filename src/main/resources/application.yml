@@ -10,8 +10,11 @@ spring:
   config:
     activate:
       on-profile: local
-
-
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
 postgres:
   datasource:
     password: postgres
@@ -27,6 +30,7 @@ postgres:
     minIdle: 1
     maxLifeTime: 10
     validationQuery: SELECT 1
+
 logging:
   level:
     org:
